@@ -40,7 +40,7 @@ userActive: (user) => {
 getMessages: async (user_Id) => {
     set({isMessageLoading: true});
     try {
-        const res = await axiosInstance.get(`/messages/${user_Id}`);
+        const res = await axiosInstance.get(`/messages/chat/${user_Id}`);
         set({messages: res.data});
         console.log("messages:", res.data);
 
